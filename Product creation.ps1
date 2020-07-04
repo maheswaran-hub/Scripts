@@ -1,7 +1,7 @@
-﻿Write-host "**********************************VccAPI Product Management***********************************" -ForegroundColor Green
+﻿Write-host "********************************** Product Management***********************************" -ForegroundColor Green
 "`n"
 write-host "Hostname:" $env:COMPUTERNAME "|" "Logged in user:" $env:username "|" "Powershell Version:" $PSVersionTable.PSVersion.Major
-#$Vccapi=Login-AzureRmAccount
+#$=Login-AzureRmAccount
 $GetSub=Get-AzureRmSubscription | Out-GridView -Title "select the subscription" -PassThru
 $sub=Select-AzureRmSubscription -SubscriptionId $GetSub.SubscriptionId
 $logtime=Get-Date -Format g
@@ -25,7 +25,7 @@ if($APIM.count -eq 1)
 function Cproduct
 {
 $psuffix=Get-Date -format "ddMMyyyy"
-$pprefix="vccapi"
+$pprefix=""
 $Pidd=Read-host "Enter the shortcode (i.e LXP)" -Verbose
 $productid= $pprefix + $Pidd + $psuffix
 $Title=Read-host "Enter the name the product" -Verbose
