@@ -1,0 +1,1 @@
+Gpupdate /force
