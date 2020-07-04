@@ -1,8 +1,8 @@
 $s = Get-Content "C:\Users\VccWintelchef\Desktop\Servers.txt"
 foreach($v in $s){
-Invoke-Command -ComputerName $v -ScriptBlock {Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value http://52.178.199.184:8530
-Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value http://52.178.199.184:8530
-Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name UpdateServiceUrlAlternate -Value http://52.178.199.184:8530
+Invoke-Command -ComputerName $v -ScriptBlock {Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name WUServer -Value http://:8530
+Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name WUStatusServer -Value http://:8530
+Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate -Name UpdateServiceUrlAlternate -Value http://:8530
 Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU -Name "AUOptions" -Value 3
 Set-ItemProperty -Path HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU -Name "NoAutoUpdate" -Value 0
 Set-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -Name ScheduledInstallDay -Value 0
