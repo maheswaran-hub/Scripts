@@ -7,6 +7,6 @@ Connect-AzAccount
 Get-AzSubscription |Out-GridView -PassThru | Select-AzSubscription
 #$rg = Get-AzResourceGroup -Name --------
 #$vm = Get-AzVM | ? {$_.Name -like "*------*"}
-Invoke-AzVMRunCommand -VMName VM-WEPR-PIMDC1  -ResourceGroupName RG-WEPRPIM-OPS -CommandId "RunPowerShellScript" -ScriptPath "C:\Users\maheswaran.pa\Desktop\SOPs\New folder\script.ps1"
+Invoke-AzVMRunCommand -VMName VM-WEPR-PIMDC1  -ResourceGroupName RG-WEPRPIM-OPS -CommandId "RunPowerShellScript" -ScriptPath "\script.ps1"
 
 
